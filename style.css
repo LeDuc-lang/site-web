@@ -1,0 +1,351 @@
+* {
+  margin: 0;
+  position: relative;
+  padding: 0;
+  box-sizing: border-box; /* Simplifie la gestion des dimensions */
+}
+
+:root {
+  --menu-bars-color: #7d0223;
+  --game-item-color: #333;
+}
+
+* {
+  font-family: "Orbitron";
+}
+p {
+  font-family: "Poppins";
+}
+
+/* Barre du bas */
+.bottom-bar {
+  width: 100%;
+  position: absolute;
+  min-height: 0;
+  background-color: var(--menu-bars-color);
+  color: #fff;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.bottom-bar-section {
+  flex: 1;
+  margin: 10px;
+}
+
+.bottom-bar-section h2 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+.bottom-bar-section a {
+  color: #fff;
+  text-decoration: none;
+  display: block;
+  margin-bottom: 5px;
+}
+
+.bottom-bar-section a:hover {
+  text-decoration: underline;
+}
+
+.b-bar-logo {
+  max-width: 100px;
+}
+
+.paralax-background {
+  z-index: -1;
+  position: fixed;
+  width: 100%;
+}
+
+.home-display {
+  display: flex;
+  width: 100%;
+  height: 600px;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0));
+  background-size: cover;
+}
+
+.home-display h1 {
+  align-self: center;
+  color: white;
+  font-size: 50px;
+  margin-left: 50px;
+}
+
+.typewriter h1 {
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: 0.15em solid white; /* The typwriter cursor */
+  white-space: nowrap; /* Keeps the content on a single line */
+  animation: typing 3.5s steps(40, end), blink-caret 0.75s step-end infinite;
+}
+
+/* The typing effect */
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: white;
+  }
+}
+
+.game-list-container {
+  padding-top: 25px;
+  padding-bottom: 25px;
+  background: white;
+}
+.game-list-container a {
+  text-decoration: none; /* Supprime le soulignement */
+  color: inherit; /* Conserve la couleur du texte définie dans le style parent */
+  display: block; /* Fait que tout le contenu du lien est cliquable */
+}
+
+.game-list-container h1 {
+  text-align: center;
+  padding-bottom: 25px;
+}
+
+.description {
+  color: white;
+  width: 100%;
+  padding-right: 75px;
+  padding-left: 75px;
+  padding-top: 150px;
+  padding-bottom: 150px;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0)),
+    linear-gradient(to top, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0)),
+    url("rsc/consolevita.svg");
+  background-color: var(--menu-bars-color);
+  font-style: italic;
+  text-align: center;
+}
+
+.blog-container {
+  padding: 150px;
+  padding-top: 75px;
+}
+.blog-container h1 {
+  font-size: 50px;
+  margin-bottom: 25px;
+}
+.blog-container h2 {
+  margin-top: 15px;
+  font-size: 25px;
+}
+.blog-container img {
+  width: 85%;
+}
+.blog-section {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+  gap: 20px;
+}
+.blog-section img {
+  border: 2px solid white;
+}
+
+.blog-section button {
+  margin-top: 10px;
+}
+
+.card {
+  display: block;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0px 14px 80px rgba(34, 35, 58, 0.2);
+  transition: all 300ms ease;
+}
+.card:hover {
+  transform: translateY(-5px);
+  cursor: pointer;
+}
+.card__container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 32px 32px;
+}
+.card__cover {
+  height: 250px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 8px 8px 0 0;
+  position: relative;
+}
+.card__body {
+  padding: 20px;
+}
+.card__title {
+  font-size: 25px;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+.card__desc {
+  font-family: "Poppins";
+  margin-bottom: 20px;
+  font-size: 15px;
+  color: #858484;
+  line-height: 1.6;
+}
+
+.card__cover--one {
+  background-image: url(rsc/warisim-logo.png);
+}
+.card__cover--two {
+  background-image: url(rsc/pokerxuno-logo.png);
+}
+.card__cover--three {
+  background-image: url(rsc/aim-trainer.webp);
+}
+
+/* Container principal de la barre de navigation */
+.navbar {
+  display: flex;
+  align-items: center; /* Aligne verticalement les éléments */
+  justify-content: space-between; /* Icone à gauche, liens à droite */
+  padding: 10px 20px;
+  background-color: var(--menu-bars-color);
+}
+
+/* Style pour l'icône SVG */
+.icon-name {
+  display: flex; /* Permet de centrer les éléments */
+  align-items: center;
+  color: white;
+  gap: 15px;
+  text-decoration: none;
+}
+
+.brain-icon {
+  width: 40px; /* Taille de l'icône */
+  height: 40px;
+  stroke: white; /* Couleur blanche pour l'icône */
+}
+
+/* Conteneur pour les liens */
+.nav-links {
+  display: flex;
+  gap: 15px; /* Espacement entre les liens */
+}
+
+/* Liens de navigation */
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.nav-links a:hover {
+  text-decoration: underline;
+}
+
+/* Blog Container */
+.blog-container {
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0));
+  background-color: var(--menu-bars-color);
+  color: #cccccc;
+
+  line-height: 1.6;
+}
+
+/* Titre principal */
+.blog-container h1 {
+  font-size: 1.8em;
+  margin-bottom: 15px;
+  color: #ffffff;
+}
+
+/* Paragraphe */
+.blog-container p {
+  font-size: 1em;
+  text-align: justify;
+}
+
+.blog-container hr {
+  margin: 20px 0;
+}
+
+.d-1 {
+  --b: 2px; /* longueur de la bordure */
+  --c: 5px; /* perspective du cube */
+  --g: calc(var(--c) * 0.707); /* 0.707 = cos(45deg) = sin(45deg) */
+  --colorbox: var(--menu-bars-color);
+  font-family: "Orbitron";
+
+  padding: 8px;
+  transition: 0.5s;
+  border: solid transparent;
+  border-width: var(--b) var(--b) calc(var(--c) + var(--b))
+    calc(var(--c) + var(--b));
+  background: linear-gradient(
+        -45deg,
+        transparent var(--g),
+        rgba(255, 255, 255, 0.6) 0
+      )
+      left / var(--c) 100%,
+    linear-gradient(135deg, transparent var(--g), rgba(255, 255, 255, 0.3) 0)
+      bottom / 100% var(--c),
+    conic-gradient(
+      from -90deg at top var(--b) right var(--b),
+      var(--colorbox) 270deg,
+      transparent 0
+    ),
+    conic-gradient(
+      from 90deg at bottom calc(var(--c) + var(--b)) left
+        calc(var(--c) + var(--b)),
+      var(--colorbox) 270deg,
+      transparent 0
+    );
+  background-repeat: no-repeat;
+  background-origin: border-box;
+  transform: translate(calc(var(--c) / -1), calc(var(--c) / 1));
+  clip-path: polygon(
+    var(--c) 0%,
+    var(--c) 0%,
+    100% 0%,
+    100% calc(100% - var(--c)),
+    100% calc(100% - var(--c)),
+    var(--c) calc(100% - var(--c)),
+    var(--c) calc(100% - var(--c))
+  );
+}
+
+.d-1:hover {
+  transform: translate(0, 0);
+  clip-path: polygon(
+    0% var(--c),
+    var(--c) 0%,
+    100% 0%,
+    100% calc(100% - var(--c)),
+    calc(100% - var(--c)) 100%,
+    0% 100%,
+    0% 100%
+  );
+}
+
+.onpage {
+  color: white;
+  --colorbox: #d91604;
+}
+
+/* Type form edit */
+.TextWrapper-sc-__sc-1f8vz90-0 {
+  font-family: "Orbitron";
+}
